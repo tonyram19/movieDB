@@ -9,7 +9,6 @@ export default class SearchBox extends Component {
         this.url = 'https://api.themoviedb.org/3';
         this.key = '?api_key=680741ed1242043318d4ce87e825296f';
 
-        this.searchMovieDummy();
     }
 
     searchMovie = () => {
@@ -29,7 +28,7 @@ export default class SearchBox extends Component {
     }
 
     searchMovieDummy = () => {
-        let query = 'batman';
+        let query = 'star wars';
 
         return axios.get(this.url + '/search/movie' + this.key + '&language=en-US&page=1&query=' + query)
             .then(response => {
