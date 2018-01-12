@@ -13,7 +13,7 @@ export default class MovieInfo extends Component {
             <div className="movieInfo">
                 <img className="moviePoster" src={imgSrc} />
                 <h1 className="movieTitle">{this.props.movie.title}</h1>
-                <h2>{this.props.movie.release_date.slice(0, 4)}</h2>
+                <h2 className="movieTitle">{this.props.movie.release_date.slice(0, 4)}</h2>
             </div>
         );
     }

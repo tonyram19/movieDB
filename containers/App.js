@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import SearchBox from './SearchBox';
 import MovieInfo from './MovieInfo';
+import Footer from './Footer';
 
 export default class App extends Component {
 
@@ -34,6 +35,7 @@ export default class App extends Component {
       <div id="mainContainer">
         <SearchBox assignMovieResults={this.assignMovieResults.bind(this)} />
         {movies}
+        <Footer />
       </div>
     );
   }
