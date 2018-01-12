@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 export default class SearchBox extends Component {
-    
+
     constructor(props) {
         super(props);
 
         this.url = 'https://api.themoviedb.org/3';
         this.key = '?api_key=680741ed1242043318d4ce87e825296f';
 
-        //this.searchMovieDummy();
+        this.searchMovieDummy();
     }
 
     searchMovie = () => {
@@ -19,12 +19,12 @@ export default class SearchBox extends Component {
             return;
 
         return axios.get(this.url + '/search/movie' + this.key + '&language=en-US&page=1&query=' + query)
-        .then(response => {
-            return this.onResponse(response);
-        })
-        .catch(error => {
-            console.log(error);
-        });
+            .then(response => {
+                return this.onResponse(response);
+            })
+            .catch(error => {
+                console.log(error);
+            });
 
     }
 
@@ -32,16 +32,16 @@ export default class SearchBox extends Component {
         let query = 'batman';
 
         return axios.get(this.url + '/search/movie' + this.key + '&language=en-US&page=1&query=' + query)
-        .then(response => {
-            return this.onResponse(response);
-        })
-        .catch(error => {
-            console.log(error);
-        });
+            .then(response => {
+                return this.onResponse(response);
+            })
+            .catch(error => {
+                console.log(error);
+            });
 
     }
 
-    onResponse = (response)=> {
+    onResponse = (response) => {
         this.props.assignMovieResults(response);
     }
 
