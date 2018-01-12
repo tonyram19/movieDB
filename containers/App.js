@@ -17,22 +17,22 @@ export default class App extends Component {
     this.setState({
       searchResults: results.data.results
     });
+    
     console.log(this.state.searchResults);
-
   }
 
   render = () => {
 
     let movies = this.state.searchResults.map(
         (movie, index) => {
-            return <MovieInfo key={index} movie={movie}/>;
+            return <MovieInfo key={index} movie={movie} className="movieInfo"/>;
         }
     );
 
     return (
       <div>
         <SearchBox assignMovieResults={this.assignMovieResults.bind(this)}/>
-        <div className="container is-fluid"> {movies} </div>
+        <div > {movies} </div>
       </div>
     );
   }

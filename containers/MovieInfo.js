@@ -9,9 +9,9 @@ export default class MovieInfo extends Component {
     render = () => {
         let imgSrc = 'https://image.tmdb.org/t/p/w92' + this.props.movie.poster_path;
         return (
-            <div>
-                <img witdh="50" height="50" src={imgSrc} />
-                <h1>{this.props.movie.title} ({this.props.movie.release_date.slice(0, 4)})</h1>
+            <div className="movieInfo">
+                <img className="moviePoster" src={imgSrc} />
+                <h1 className="movieTitle">{this.props.movie.title} ({this.props.movie.release_date.slice(0, 4)})</h1>
             </div>
         );
     }

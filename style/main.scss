@@ -1,5 +1,25 @@
-$primary-color: grey;
-
 body {
-    color: $primary-color;
-  }
+    margin: auto 10px;
+    width: auto;
+    height: 2000px;
+}
+
+.movieInfo {
+  border-radius: 3px; 
+  box-shadow: 4px 4px 15px #acacac;
+  display: inline-block;
+  width: 200px;
+  height: 200px;  
+  vertical-align: top;
+  margin: 10px;
+}
+
+.movieTitle {
+  color: rgba(85, 85, 85, 0.781);
+  font-weight: bold;
+  vertical-align:  top;
+}
+
+.moviePoster {
+  vertical-align: top;
+}
