@@ -1,0 +1,27 @@
+body {
+  margin: auto 10px;
+  width: auto;
+  height: 2000px; }
+
+.movieInfo {
+  color: rgba(85, 85, 85, 0.781);
+  border-radius: 3px;
+  box-shadow: 4px 4px 15px #acacac;
+  display: inline-block;
+  width: 240px;
+  height: 225px;
+  vertical-align: top;
+  margin: 10px;
+  text-align: center;
+  padding: 10px; }
+
+.movieTitle {
+  font-weight: bold;
+  vertical-align: top; }
+
+.moviePoster {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/*# sourceMappingURL=main.css.map */

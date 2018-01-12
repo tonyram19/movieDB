@@ -31,9 +31,9 @@ export default class App extends Component {
     );
 
     return (
-      <div>
+      <div id="mainContainer">
         <SearchBox assignMovieResults={this.assignMovieResults.bind(this)} />
-        <div > {movies} </div>
+        {movies}
       </div>
     );
   }

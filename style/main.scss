@@ -1,20 +1,40 @@
-body {
-    margin: auto 10px;
-    width: auto;
-    height: 2000px;
+$small-screen-size: 600px;
+
+#mainContainer {
+    color: #494949;
+    font-family: Helvetica, Sans-Serif;
+    font-size: 7pt;
+    padding: 10px;
+    margin: auto;
+    width: 95%;
+}
+
+h1 {
+  font-weight: normal;
 }
 
 .movieInfo {
   color: rgba(85, 85, 85, 0.781);
   border-radius: 3px; 
-  box-shadow: 4px 4px 15px #acacac;
+  box-shadow: 3px 3px 12px #acacac;
   display: inline-block;
-  width: 240px;
   height: 225px;  
   vertical-align: top;
-  margin: 10px;
+  margin: 10px 5px;
   text-align: center;
   padding: 10px;
+  width: 240px;
+
+  @media screen and (max-width: $small-screen-size) {
+    width: 85%;
+    margin: 10px auto;
+  }
+
+}
+
+.movieInfo:hover {
+  background-color: rgb(235, 235, 235);
+  cursor: pointer;
 }
 
 .movieTitle {
