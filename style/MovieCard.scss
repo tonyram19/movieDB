@@ -1,0 +1,40 @@
+@import 'Colors';
+
+$small-screen-size: 600px;
+
+.movieCard {
+    background-color: $cards;
+    color: $text;
+    border-radius: 2px; 
+    display: inline-block;
+    height: 250px;  
+    vertical-align: top;
+    margin: 10px 5px;
+    text-align: center;
+    padding: 10px;
+    width: 240px;
+  
+    @media screen and (max-width: $small-screen-size) {
+      width: 85%;
+      margin: 10px auto;
+    }
+  
+  }
+  
+  .movieCard:hover {
+    cursor: pointer;
+    background: rgba(255,255,255,1);
+    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(249,236,243,1) 98%, rgba(249,236,243,1) 100%);
+  }
+  
+  .movieCardTitle {
+    font-weight: lighter;
+    vertical-align: top;
+  }
+  
+  .movieCardPoster {
+    display: block; 
+    border: 10px solid rgb(243, 243, 243);
+    margin-left: auto;
+    margin-right: auto;
+  }

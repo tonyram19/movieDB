@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import SearchBox from './SearchBox';
+import MovieCard from './MovieCard';
 import MovieInfo from './MovieInfo';
 import Footer from './Footer';
 
@@ -10,7 +11,8 @@ export default class App extends Component {
     super(props);
 
     this.state = {
-      searchResults: []
+      searchResults: [],
+      infoHidden : true
     };
 
   }
@@ -27,7 +29,7 @@ export default class App extends Component {
 
     let movies = this.state.searchResults.map(
       (movie, index) => {
-        return <MovieInfo key={index} movie={movie} className="movieInfo" />;
+        return <MovieCard key={index} movie={movie} className="movieInfo" />;
       }
     );
 
@@ -35,6 +37,7 @@ export default class App extends Component {
       <div id="mainContainer">
         <SearchBox assignMovieResults={this.assignMovieResults.bind(this)} />
         {movies}
+        <MovieInfo hidden={this.state.infoHidden}/>
         <Footer />
       </div>
     );

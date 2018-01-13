@@ -10,7 +10,7 @@ export default class Footer extends Component {
         return (
             <div id="footer">
                 <footer>
-                    Made by <a href="http://tonyram19.github.io">Tony Ramirez</a> using <a href="https://developers.themoviedb.org/3/getting-started/introduction">The Movie Database API</a> and React.
+                    Made by <a href="http://tonyram19.github.io">Tony Ramírez</a> using <a href="https://developers.themoviedb.org/3/getting-started/introduction">The Movie Database API</a> and <a href="https://reactjs.org/">React</a>.
                 </footer>
             </div>
         );

@@ -44,12 +44,20 @@ export default class SearchBox extends Component {
         this.props.assignMovieResults(response);
     }
 
+    handleKeyPress = (e) => {
+        var key = e.keyCode || e.which;
+        if (key == 13) {
+            console.log('sd');
+            this.searchMovie();
+        }
+    }
+
     render = () => {
         return (
             <div>
                 <h1 id='myTitle'>Find a movie</h1>
                 <input onSubmit={this.searchMovie} id='inputBox'></input>
-                <button onClick={this.searchMovie}>Search</button>
+                <button type="submit" onClick={this.searchMovie}>Search</button>
             </div>
         );
     }

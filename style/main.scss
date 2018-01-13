@@ -1,10 +1,6 @@
-$small-screen-size: 600px;
-
-$bg: #FFFFFF;
-$cards: rgb(252, 252, 252);
-$bright: #58FCEC;
-$text: #326273;
-$highlight: rgb(255, 235, 244);
+@import 'Colors';
+@import 'MovieInfo';
+@import 'MovieCard';
 
 body {
   background-color: $bg;
@@ -21,43 +17,6 @@ body {
 
 h1 {
   font-weight: normal;
-}
-
-.movieInfo {
-  background-color: $cards;
-  color: $text;
-  border-radius: 2px; 
-  display: inline-block;
-  height: 250px;  
-  vertical-align: top;
-  margin: 10px 5px;
-  text-align: center;
-  padding: 10px;
-  width: 240px;
-
-  @media screen and (max-width: $small-screen-size) {
-    width: 85%;
-    margin: 10px auto;
-  }
-
-}
-
-.movieInfo:hover {
-  cursor: pointer;
-  background: rgba(255,255,255,1);
-  background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(249,236,243,1) 98%, rgba(249,236,243,1) 100%);
-}
-
-.movieTitle {
-  font-weight: lighter;
-  vertical-align: top;
-}
-
-.moviePoster {
-  display: block; 
-  border: 10px solid rgb(243, 243, 243);
-  margin-left: auto;
-  margin-right: auto;
 }
 
 #footer {
