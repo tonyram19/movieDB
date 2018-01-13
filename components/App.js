@@ -12,7 +12,8 @@ export default class App extends Component {
 
     this.state = {
       searchResults: [],
-      infoHidden : true
+      infoHidden : true,
+      currentMovieID: 0
     };
 
   }
@@ -25,11 +26,36 @@ export default class App extends Component {
     console.log(this.state.searchResults);
   }
 
+  showMovieInfo = () => {
+    this.setState({
+      infoHidden: false
+    });
+  }
+
+  hideMovieInfo = () => {
+    this.setState({
+      infoHidden: true
+    });
+  }
+
+  setCurrentMovieID = (id) => {
+    this.setState({
+      currentMovieID: id
+    });
+
+  }
+
   render = () => {
 
     let movies = this.state.searchResults.map(
       (movie, index) => {
-        return <MovieCard key={index} movie={movie} className="movieInfo" />;
+      return (<MovieCard 
+                key={index} 
+                movie={movie} 
+                className="movieInfo" 
+                showMovieInfo={this.showMovieInfo}
+                setCurrentMovieID={this.setCurrentMovieID.bind(this)}
+              />);
       }
     );
 
@@ -37,7 +63,11 @@ export default class App extends Component {
       <div id="mainContainer">
         <SearchBox assignMovieResults={this.assignMovieResults.bind(this)} />
         {movies}
-        <MovieInfo hidden={this.state.infoHidden}/>
+        <MovieInfo 
+          hidden={this.state.infoHidden}
+          hideMovieInfo={this.hideMovieInfo.bind(this)}
+          movieID={this.state.currentMovieID}
+        />
         <Footer />
       </div>
     );

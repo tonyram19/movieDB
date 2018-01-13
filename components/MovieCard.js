@@ -7,7 +7,8 @@ export default class MovieCard extends Component {
     }
 
     openMovie = () => {
-        console.log("Opening movie " + this.props.movie.title);
+        this.props.setCurrentMovieID(this.props.movie.id);
+        this.props.showMovieInfo();
     }
 
     render = () => {
